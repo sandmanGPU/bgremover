@@ -1,0 +1,75 @@
+[2023-11-22 00:04:48,773: INFO: main: ****************************************]
+[2023-11-22 00:04:48,773: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:05:39,431: ERROR: main: BG_REMOVER.main() missing 1 required positional argument: 'save_dir']
+Traceback (most recent call last):
+  File "h:\projects\bgremover\main.py", line 11, in <module>
+    obj.main()
+TypeError: BG_REMOVER.main() missing 1 required positional argument: 'save_dir'
+[2023-11-22 00:06:11,397: INFO: main: ****************************************]
+[2023-11-22 00:06:11,397: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:06:13,379: ERROR: main: module 'PIL.Image' has no attribute 'save']
+Traceback (most recent call last):
+  File "h:\projects\bgremover\main.py", line 13, in <module>
+    obj.main(save_dir='./')
+  File "h:\projects\bgremover\src\bgrem\pipeline\BGREM_pipeline.py", line 19, in main
+    Image.save(savename, self.foreground)
+AttributeError: module 'PIL.Image' has no attribute 'save'
+[2023-11-22 00:06:56,442: INFO: main: ****************************************]
+[2023-11-22 00:06:56,443: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:06:59,336: INFO: main: >>>>>>> stage BACKGROUND REMOVAL completed <<<<<<<
+
+X-------------------------------------------------X]
+[2023-11-22 00:09:36,349: INFO: main: ****************************************]
+[2023-11-22 00:09:36,350: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:09:51,405: INFO: main: >>>>>>> stage BACKGROUND REMOVAL completed <<<<<<<
+
+X-------------------------------------------------X]
+[2023-11-22 00:10:59,244: INFO: main: ****************************************]
+[2023-11-22 00:10:59,245: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:11:53,448: INFO: main: >>>>>>> stage BACKGROUND REMOVAL completed <<<<<<<
+
+X-------------------------------------------------X]
+[2023-11-22 00:12:45,135: INFO: main: ****************************************]
+[2023-11-22 00:12:45,135: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:14:40,045: ERROR: main: '{}' is not of type 'array'
+
+Failed validating 'type' in schema:
+    {'items': {'properties': {'data': {'items': {'type': 'number'},
+                                       'type': 'array'},
+                              'label': {'type': 'integer'},
+                              'type': {'type': 'string'}},
+               'type': 'object'},
+     'type': 'array'}
+
+On instance:
+    '{}']
+Traceback (most recent call last):
+  File "h:\projects\bgremover\main.py", line 13, in <module>
+    obj.main(save_dir='./')
+  File "h:\projects\bgremover\src\bgrem\pipeline\BGREM_pipeline.py", line 16, in main
+    self.foreground = self.bgrem_model.remove_background(self.img, only_mask=only_mask)
+  File "h:\projects\bgremover\src\bgrem\components\remove_bg.py", line 15, in remove_background
+    output = remove(input, only_mask=only_mask, session=self.session)
+  File "C:\Users\smanandh\.conda\envs\bg\lib\site-packages\rembg\bg.py", line 257, in remove
+    masks = session.predict(img, *args, **kwargs)
+  File "C:\Users\smanandh\.conda\envs\bg\lib\site-packages\rembg\sessions\sam.py", line 169, in predict
+    validate(instance=prompt, schema=schema)
+  File "C:\Users\smanandh\.conda\envs\bg\lib\site-packages\jsonschema\validators.py", line 1308, in validate
+    raise error
+jsonschema.exceptions.ValidationError: '{}' is not of type 'array'
+
+Failed validating 'type' in schema:
+    {'items': {'properties': {'data': {'items': {'type': 'number'},
+                                       'type': 'array'},
+                              'label': {'type': 'integer'},
+                              'type': {'type': 'string'}},
+               'type': 'object'},
+     'type': 'array'}
+
+On instance:
+    '{}'
+[2023-11-22 00:15:29,529: INFO: main: ****************************************]
+[2023-11-22 00:15:29,529: INFO: main: >>>>>>> stage BACKGROUND REMOVAL started <<<<<<<]
+[2023-11-22 00:15:31,463: INFO: main: >>>>>>> stage BACKGROUND REMOVAL completed <<<<<<<
+
+X-------------------------------------------------X]
