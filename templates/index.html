@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Welcome to SliceMe</title>
+    <link rel="stylesheet" href="static/particle.css">
+    <link rel="stylesheet" href="static/landingstyle.css">
+
+</head>
+<body>
+    <div id="particles-js"></div>
+
+    <div class="center-card">
+        <h1>Welcome to SliceMe!!</h1>
+        <p>Remove background from your precious shot.</p>
+        <p>Upload a photo, erase the background and stand out from the rest.</p>
+        <p>Once the processing is complete, download your outstanding picture.</p>
+        
+        <form class="file-upload" method="POST" action="/up" enctype="multipart/form-data">
+            <label for="fileInput">Get Started</label>
+            <input type="submit" value="Upload" id="fileInput">
+        </form>
+    </div>
+    <div class="citation">
+        Background animation by <a href="https://vincentgarreau.com/particles.js/" target="_blank">Vincent Garreau</a>
+      </div>
+    <script src="static/addons/particles.js"></script>
+    <script src="static/particle.js"></script>
+</body>
+</html>

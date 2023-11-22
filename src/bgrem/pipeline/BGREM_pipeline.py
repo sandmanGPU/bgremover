@@ -14,6 +14,7 @@ class BG_REMOVER():
     def main(self, save_dir, only_mask=False):
         self.img = Image.open(self.filename)
         self.foreground = self.bgrem_model.remove_background(self.img, only_mask=only_mask)
-        save_prefix = os.path.basename(self.filename).split('.')[0]
-        savename = os.path.join(save_dir, save_prefix+'-bg.png' )
+        save_prefix = os.path.basename(self.filename).split('.')[0]+'-bg.png'
+        savename = os.path.join(save_dir, save_prefix)
         self.foreground.save(savename)
+        return save_prefix
