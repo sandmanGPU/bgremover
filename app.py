@@ -26,7 +26,7 @@ app.config['RESULT_FOLDER'] = RESULT_FOLDER
 
 # Function to check if the uploaded file is an allowed image format
 def allowed_file(filename):
-    allowed_extensions = {'png', 'jpg', 'jpeg', 'gif'}
+    allowed_extensions = {'png', 'jpg', 'jpeg', 'mp4', 'avi'}
     return '.' in filename and filename.rsplit('.', 1)[1].lower() in allowed_extensions
 
 @app.route('/home')
