@@ -84,10 +84,7 @@ def processImage(filename):
         save_dir = app.config['RESULT_FOLDER']
         os.makedirs(save_dir, exist_ok=True)
         resultname = clApp.rembg.main(save_dir=save_dir)
-        # print('######$$$$$$$#####\n',crop_list)
-        
-        # outputname = url_for('static', filename=f'results/{result_path}')
-        # # print('######$$$$$$$#####\n',obj_list)
+
 
         return render_template('upload.html',  resultname = resultname, filename=filename, enable_process=True)
     else:
@@ -96,5 +93,5 @@ def processImage(filename):
 
 if __name__ == '__main__':
     clApp = ClientApp()
-    app.run(debug=True)
-    # app.run(host='0.0.0.0', port=80) #Azure
+    # app.run(debug=True)
+    app.run(host='0.0.0.0', port=8080) #AWS
